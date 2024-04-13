@@ -26,9 +26,9 @@
     <title>Document</title>
   </head>
   <body class="bg-gray-50">
-    <section id="hero" class="text-white bg-slate-700">
+    <section id="hero" class="px-4 text-white bg-slate-700">
       <!-- Hero Container -->
-      <div class="container mx-auto">
+      <div class="container">
         <!-- Menu/Logo Container -->
         <nav
           class="flex items-center justify-between font-normal text-white bg-slate-700"
@@ -164,99 +164,174 @@
       </div>
     </section>
 
-    <!-- Product -->
-    <section id="Edit_Product">
-     <!--breadcrums  -->
-     <div class="container py-4 flex items-center gap-2 mt-4">
+    <!--breadcrums  -->
+    <div class="container py-4 flex items-center gap-2 mt-4">
       <a href="index.html" class="text-primary text-xl">
         <i class="ri-home-7-fill"></i>
       </a>
       <span class="text-xl text-gray-400">
         <i class="ri-arrow-right-s-line"></i>
       </span>
-      <p class="text-gray-600 font-medium">Edit Product</p>
+      <p class="text-gray-600 font-medium">Cart</p>
     </div>
     <!--breadcrums end  -->
 
-      <div class="container mx-auto mt-12 py-12 my-12 px-6 md:p-16">
-        <h1 class="text-3xl font-bold text-zinc-500 mb-10">Edit Product</h1>
-
-        <div class="edit__products">
-          <h2 class="text-xl font-semibold text-zinc-600 mb-4">Name</h2>
-
-          <form action="" class="form grid">
+    <section id="cart" class="max-w-6xl mx-auto">
+      <div class="container lg:grid grid-cols-12 gap-6 items-start pb-16 pt-4">
+        <!-- left -->
+        <div
+          class="lg:col-span-8 md:col-span-6 border border-gray-200 py-12 space-y-4"
+        >
+          <div class="bg-gray-100">
+            <p class="text-gray-600 capitalize text-3xl">
+              order 644abb0036d66f2d43b50f1e
+            </p>
+          </div>
+          <div>
+            <p class="text-gray-600 capitalize text-2xl">shipping</p>
+          </div>
+          <div class="flex items-center gap-2">
+            <p class="text-gray-600 capitalize text-xl">name :</p>
+            <p class="text-gray-600">John Doe</p>
+          </div>
+          <div class="flex items-center gap-2">
+            <p class="text-gray-600 capitalize text-xl">Email :</p>
+            <p class="text-gray-600">example@email.com</p>
+          </div>
+          <div class="flex items-center gap-2">
+            <p class="text-gray-600 capitalize text-xl">Address :</p>
+            <p class="text-gray-600">20 Sathon Bangkok 10210</p>
+          </div>
+          <div class="text-red-500">
             <input
               type="text"
-              class="w-full p-4 border border-gray-300 rounded-md placeholder:font-sans placeholder:font-light outline-slate-400"
-              placeholder="macbook1-1" 
+              placeholder="Not Delived"
+              class="w-full py-4 bg-red-200 text-sm capitalize border border-red-200 rounded-md outline-none"
             />
-            <h2 class="text-xl font-semibold text-zinc-600 mb-4">Price</h2>
+          </div>
 
-            <input
-              type="number"
-              class="w-full p-4 border border-gray-300 rounded-md placeholder:font-sans placeholder:font-light outline-slate-400"
-              placeholder="39.99"
-              value=""
-            />
-            <h2 class="text-xl font-semibold text-zinc-600 mb-4">Image</h2>
+          <div class="border-b border-gray-200 mt-4"></div>
+          <div>
+            <p class="text-gray-600 capitalize text-2xl">payment method</p>
+          </div>
+          <div class="flex items-center gap-2">
+            <p class="text-gray-600 capitalize text-xl">method :</p>
+            <p class="text-gray-600">PayPal</p>
+          </div>
+
+          <div class="text-red-500">
             <input
               type="text"
-              class="w-full p-4 border border-gray-300 rounded-md placeholder:font-sans placeholder:font-light outline-slate-400 "
-              placeholder="images/macbook1-1"
+              placeholder="Paid on 2023-4-27t18 13:11"
+              class="w-full py-4 bg-blue-200 text-sm capitalize border border-blue-200 rounded-md outline-none"
             />
-            <div class="imge-choose flex">
-              <button  class="px-6 border-2 font-medium text-gray-400 rounded-l-lg bg-zinc-100 hover:border-slate-400">ChooseFile
-
-              </button>
-              <input
-              type="text"
-              class="w-full p-4  border border-gray-300 rounded-r-lg placeholder:font-sans placeholder:font-light outline-slate-400"
-              placeholder="images/macbook1-1"
-            />
+          </div>
+          <div class="border-b border-gray-200 mt-4"></div>
+          <div>
+            <p class="text-gray-600 capitalize text-2xl">order items</p>
+          </div>
+          <!-- order items -->
+          <div class="grid grid-cols-9 gap-2">
+            <!-- gird img -->
+            <div class="w-full col-span-1">
+              <img src="../img/case1-2.jpg" alt="" />
             </div>
-            
-           
-            <h2 class="text-xl font-semibold text-zinc-600 mb-4">Brand</h2>
-            <input
-              type="text"
-              class="w-full p-4 border border-gray-300 rounded-md placeholder:font-sans placeholder:font-light outline-slate-400"
-              placeholder="Logitech"
-            />
-            <h2 class="text-xl font-semibold text-zinc-600 mb-4">
-              Count In Stock
-            </h2>
-            <input
-              type="text"
-              class="w-full p-4 border border-gray-300 rounded-md placeholder:font-sans placeholder:font-light outline-slate-400"
-              placeholder="7"
-            />
-            <h2 class="text-xl font-semibold text-zinc-600 mb-4">Category</h2>
-            <input
-              type="text"
-              class="w-full p-4 border border-gray-300 rounded-md placeholder:font-sans placeholder:font-light outline-slate-400"
-              placeholder="EDlectronics"
-            />
-            <h2 class="text-xl font-semibold text-zinc-600 mb-4">
-              Description
-            </h2>
-            <input
-              type="text"
-              class="w-full p-4 border border-gray-300 rounded-md placeholder:font-sans placeholder:font-light mb-6 outline-slate-400"
-              placeholder="Get a Better handle on your games with this Logitech LiGHTSYNC  "
-            />
-            
-            
+            <!-- gird img -->
+            <!-- grid content1 -->
+            <div class="col-span-4 p-4">
+              <p class="text-sm text-center text-gray-500">
+                Lorem ipsum dolor sit amet.
+              </p>
             </div>
-            <button  class="px-8 py-4 border border-primary bg-primary text-white  uppercase rounded-md hover:bg-transparent hover:text-primary transition " >Update
+            <!-- grid content2 -->
+            <div class="col-span-4 p-4">
+              <p class="text-sm text-gray-500 text-left">2x49.99 = $99.98</p>
+            </div>
+          </div>
+          <div class="border-b border-gray-200 mt-4"></div>
 
-            </button>
-          </form>
+          <!-- order items end -->
+          <!-- order items -->
+          <div class="grid grid-cols-9 gap-2">
+            <!-- gird img -->
+            <div class="w-full col-span-1">
+              <img src="../img/airpods1-1.jpg" alt="" />
+            </div>
+            <!-- gird img -->
+            <!-- grid content1 -->
+            <div class="col-span-4 p-4">
+              <p class="text-sm text-center text-gray-500">
+                Lorem ipsum dolor sit amet.
+              </p>
+            </div>
+            <!-- grid content2 -->
+            <div class="col-span-4 p-4">
+              <p class="text-sm text-left text-gray-500">1x$299.99 = $299.99</p>
+            </div>
+          </div>
+          <div class="border-b border-gray-200 mt-4"></div>
+
+          <!-- order items end -->
+          <!-- order items -->
+          <div class="grid grid-cols-9 gap-2">
+            <!-- gird img -->
+            <div class="w-full col-span-1">
+              <img src="../img/mouse1-1.jpg" alt="" />
+            </div>
+            <!-- gird img -->
+            <!-- grid content1 -->
+            <div class="col-span-4 p-4">
+              <p class="text-sm text-center text-gray-500">
+                Lorem ipsum dolor sit amet.
+              </p>
+            </div>
+            <!-- grid content2 -->
+            <div class="col-span-4 p-4">
+              <p class="text-sm text-left text-gray-500">2x$39 = $79.98</p>
+            </div>
+          </div>
+
+          <!-- order items end -->
         </div>
+        <!-- left end -->
+
+        <!-- right -->
+        <div class="lg:col-span-4 md:col-span-3">
+          <div class="space-y-4 border border-gray-200 p-4">
+            <p class="text-gray-600 capitalize pt-4 text-3xl">Order Summary</p>
+          </div>
+          <div class="border border-gray-200">
+            <div class="flex justify-between items-center p-4">
+              <p class="text-gray-600 text-xl">Items</p>
+              <p class="text-gray-600 text-sm">$379.97</p>
+            </div>
+          </div>
+          <div class="border border-gray-200">
+            <div class="flex justify-between items-center p-4">
+              <p class="text-gray-600 text-xl">Shipping</p>
+              <p class="text-gray-600 text-sm">Free</p>
+            </div>
+          </div>
+          <div class="border border-gray-200">
+            <div class="flex justify-between items-center p-4">
+              <p class="text-gray-600 text-xl">Tax</p>
+              <p class="text-gray-600 text-sm">$30</p>
+            </div>
+          </div>
+          <div class="border border-gray-200">
+            <div class="flex justify-between items-center p-4">
+              <p class="text-gray-600 text-xl">Total</p>
+              <p class="text-gray-600 text-sm">$409.97</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- right end  -->
       </div>
     </section>
-
-     <!-- Footer -->
-     <footer class="text-white bg-slate-700">
+    <!-- Footer -->
+    <!-- Footer -->
+    <footer class="text-white bg-slate-700">
       <div class="container mx-auto pt-12 px-5 pb-10">
         <!-- Flex Container For All Items -->
         <div

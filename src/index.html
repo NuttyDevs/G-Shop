@@ -11,70 +11,90 @@
     />
 
     <!-- FONTS -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&display=swap"
-      rel="stylesheet"
-    />
+
     <!-- SWIPER CSS -->
     <link rel="stylesheet" href="css/swiper-bundle.min.css" />
 
     <script src="../js/script.js" defer></script>
 
     <link href="./output.css" rel="stylesheet" />
-    <title>G-Shop</title>
+    <title>Document</title>
   </head>
+
   <body class="bg-gray-50">
     <section id="hero" class="text-white bg-slate-700">
       <!-- Hero Container -->
-      <div class="container mx-auto mt-32 py-12 my-32 px-6">
+      <div class="container max-w-6xl">
         <!-- Menu/Logo Container -->
         <nav
-          class="flex items-center justify-between mx-auto font-normal text-white bg-slate-700 p-12"
+          class="flex items-center justify-between font-normal text-white bg-slate-700"
         >
           <!-- Logo -->
+
           <a href="index.html">
-            <div class="nav__logo flex gap-2 items-center text text-3xl">
-              <i class="ri-shopping-cart-2-line text-red-600"></i>
-              <p>GShopping</p>
+            <div class="nav__logo py-12 max-w-lg:left-0 max-w-md:left-0">
+              <p
+                class="text-2xl text-white border-b-4 rounded-l-3xl border-gray-300"
+              >
+                <span class="text-red-500 text-3xl">G</span>
+                Shopping
+              </p>
             </div>
           </a>
 
           <!-- Menu -->
-          <div class="hidden h-10 font-alata md:flex md:space-x-8">
-            <div class="flex">
+          <div class="hidden h-10 font-normal md:flex md:space-x-2">
+            <!-- searchbar -->
+            <div
+              class="w-full md:max-w-md xl:max-w-xl lg:max-w-lg lg:flex relative hidden"
+            >
+              <span class="absolute left-4 top-2 text-lg text-gray-400">
+                <i class="ri-search-line"></i>
+              </span>
               <input
                 type="text"
-                placeholder="Enter your email address"
-                class="px-4 text-center border border-zinc-500 placeholder:text-xs placeholder:text-center md:text-left placeholder:md:text-left text-gray-800 focus:outline-none rounded-l-lg"
+                class="w-full border border-primary border-r-0 pl-12 py-3 pr-3 rounded-l-md focus:outline-none"
+                placeholder="search"
               />
               <button
-                class="inline-block px-2 text-center border rounded-r-lg hover:bg-violet-800 hover:border-violet-800"
+                type="submit"
+                class="bg-primary border border-primary text-white px-8 font-medium rounded-r-md hover:bg-transparent hover:text-primary transition"
               >
                 Search
               </button>
             </div>
+            <!-- searchbar end -->
 
-            <div class="group">
-              <i class="ri-shopping-cart-2-line text text-xl">Cart</i>
-
+            <div class="nav-group">
               <div
-                class="mx-2 group-hover:border-b group-hover:border-blue-50"
-              ></div>
-            </div>
-            <a href="sign_in.html">
-              <div class="group">
-                <i class="ri-user-line text-xl">Sing in</i>
-                <div
-                  class="mx-2 group-hover:border-b group-hover:border-blue-50"
-                ></div>
+                class="flex items-center justify-between space-x-6 capitalize pl-6"
+              >
+                <a
+                  href="index.html"
+                  class="text-white text-xl text-center hover:border-b"
+                  >home</a
+                >
+                <a
+                  href="products.html"
+                  class="text-white text-xl text-center hover:border-b"
+                  >shop</a
+                >
+                <a
+                  href="#"
+                  class="text-white text-xl text-center hover:border-b"
+                  >contact
+                </a>
+                <a
+                  href="sign_in.html"
+                  class="text-white text-xl text-center hover:border-b"
+                  >signin</a
+                >
               </div>
-            </a>
+            </div>
           </div>
 
           <!-- Hamburger Button -->
-          <div class="md:hidden">
+          <div class="lg:hidden">
             <button
               id="menu-btn"
               type="button"
@@ -91,32 +111,51 @@
             id="menu"
             class="md:hidden absolute top-0 bottom-0 left-0 hidden justify-center self-end w-full min-h-screen py-1 pt-40 pl-12 space-y-3 text-lg text-white uppercase bg-black opacity-80"
           >
-            <div class="flex flex-col gap-4 text-center py-20">
-              <div class="flex">
+            <div class="flex flex-col gap-4 text-center space-y-6">
+              <!-- searchbar -->
+              <div class="w-full flex relative">
+                <span class="absolute left-4 top-3 text-sm text-gray-400">
+                  <i class="ri-search-line"></i>
+                </span>
                 <input
                   type="text"
-                  placeholder="Enter your email address"
-                  class="px-4 text-center border border-zinc-500 placeholder:text-xs placeholder:text-center md:text-left placeholder:md:text-left text-gray-800 focus:outline-none rounded-l-lg"
+                  class="w-full border border-primary border-r-0 pl-12 py-2 pr-2 rounded-l-md focus:outline-none"
+                  placeholder="search"
                 />
                 <button
-                  class="inline-block px-2 text-center border rounded-r-lg hover:bg-violet-800 hover:border-violet-800"
+                  type="submit"
+                  class="bg-primary border border-primary text-white px-8 font-medium rounded-r-md hover:bg-transparent hover:text-primary transition"
                 >
                   Search
                 </button>
               </div>
+              <!-- searchbar end -->
 
-              <div class="group">
-                <i class="ri-shopping-cart-2-line text-xl">Cart</i>
-
+              <div class="nav-group">
                 <div
-                  class="mx-2 group-hover:border-b group-hover:border-blue-50"
-                ></div>
-              </div>
-              <div class="group">
-                <i class="ri-user-line text-center">Sing in</i>
-                <div
-                  class="mx-2 group-hover:border-b group-hover:border-blue-50"
-                ></div>
+                  class="flex flex-col items-center justify-between space-y-6 capitalize pl-6"
+                >
+                  <a
+                    href="index.html"
+                    class="text-white text-xl text-center hover:border-b"
+                    >home</a
+                  >
+                  <a
+                    href="products.html"
+                    class="text-white text-xl text-center hover:border-b"
+                    >shop</a
+                  >
+                  <a
+                    href="#"
+                    class="text-white text-xl text-center hover:border-b"
+                    >contact
+                  </a>
+                  <a
+                    href="sign_in.html"
+                    class="text-white text-xl text-center hover:border-b"
+                    >signin</a
+                  >
+                </div>
               </div>
             </div>
           </div>
@@ -130,23 +169,30 @@
         <h1 class="text-3xl font-bold text-zinc-600">Latest Products</h1>
 
         <div
-          class="grid gap-6 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 w-300 justify-center mt-6"
+          class="grid gap-6 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 justify-center mt-6"
         >
           <div
             class="my-card rounded-xl border-3 border-zinc-50 bg-white p-2 shadow-md justify-center"
           >
             <div class="hover:scale-105 rounded-xl flex justify-center">
-              <img src="../img/macbook1-1.jpg" alt="" class="my-img" />
+              <a href="details.html">
+                <img src="../img/macbook1-1.jpg" alt="" class="my-img" />
+              </a>
             </div>
 
             <p class="text-zinc-600 mb-4 border-b-2">
               Apple AirPods Max Wireless
             </p>
             <div class="flex justify-between p-2">
-              <h3 class="text-2xl font-bold text-zinc-500 mb-4">$39.99</h3>
-              <i
-                class="ri-shopping-bag-line text-xl text-zinc-500 bg-zinc-100 text-center justify-center rounded-full w-10 h-10 hover:bg-yellow-200"
-              ></i>
+              <h3 class="text-2xl font-bold text-zinc-500 block mb-4">
+                $39.99
+              </h3>
+
+              <div
+                class="w-10 h-10 text-white text-center bg-primary rounded-full p-2 hover:bg-green-300 hover:text-gray-500 transition"
+              >
+                <i class="ri-shopping-bag-line"></i>
+              </div>
             </div>
           </div>
 
@@ -166,9 +212,11 @@
             </p>
             <div class="flex justify-between p-2">
               <h3 class="text-2xl font-bold text-zinc-500 mb-4">$39.99</h3>
-              <i
-                class="ri-shopping-bag-line text-xl text-zinc-500 bg-zinc-100 text-center justify-center rounded-full w-10 h-10 hover:bg-yellow-200"
-              ></i>
+              <div
+                class="w-10 h-10 text-white text-center bg-primary rounded-full p-2 hover:bg-green-300 hover:text-gray-500 transition"
+              >
+                <i class="ri-shopping-bag-line"></i>
+              </div>
             </div>
           </div>
 
@@ -184,9 +232,11 @@
             </p>
             <div class="flex justify-between p-2">
               <h3 class="text-2xl font-bold text-zinc-500 mb-4">$39.99</h3>
-              <i
-                class="ri-shopping-bag-line text-xl text-zinc-500 bg-zinc-100 text-center justify-center rounded-full w-10 h-10 hover:bg-yellow-200"
-              ></i>
+              <div
+                class="w-10 h-10 text-white text-center bg-primary rounded-full p-2 hover:bg-green-300 hover:text-gray-500 transition"
+              >
+                <i class="ri-shopping-bag-line"></i>
+              </div>
             </div>
           </div>
 
@@ -202,9 +252,11 @@
             </p>
             <div class="flex justify-between p-2">
               <h3 class="text-2xl font-bold text-zinc-500 mb-4">$39.99</h3>
-              <i
-                class="ri-shopping-bag-line text-xl text-zinc-500 bg-zinc-100 text-center justify-center rounded-full w-10 h-10 hover:bg-yellow-200"
-              ></i>
+              <div
+                class="w-10 h-10 text-white text-center bg-primary rounded-full p-2 hover:bg-green-300 hover:text-gray-500 transition"
+              >
+                <i class="ri-shopping-bag-line"></i>
+              </div>
             </div>
           </div>
 
@@ -220,9 +272,11 @@
             </p>
             <div class="flex justify-between p-2">
               <h3 class="text-2xl font-bold text-zinc-500 mb-4">$39.99</h3>
-              <i
-                class="ri-shopping-bag-line text-xl text-zinc-500 bg-zinc-100 text-center justify-center rounded-full w-10 h-10 hover:bg-yellow-200"
-              ></i>
+              <div
+                class="w-10 h-10 text-white text-center bg-primary rounded-full p-2 hover:bg-green-300 hover:text-gray-500 transition"
+              >
+                <i class="ri-shopping-bag-line"></i>
+              </div>
             </div>
           </div>
 
@@ -238,9 +292,11 @@
             </p>
             <div class="flex justify-between p-2">
               <h3 class="text-2xl font-bold text-zinc-500 mb-4">$39.99</h3>
-              <i
-                class="ri-shopping-bag-line text-xl text-zinc-500 bg-zinc-100 text-center justify-center rounded-full w-10 h-10 hover:bg-yellow-200"
-              ></i>
+              <div
+                class="w-10 h-10 text-white text-center bg-primary rounded-full p-2 hover:bg-green-300 hover:text-gray-500 transition"
+              >
+                <i class="ri-shopping-bag-line"></i>
+              </div>
             </div>
           </div>
 
@@ -256,9 +312,11 @@
             </p>
             <div class="flex justify-between p-2">
               <h3 class="text-2xl font-bold text-zinc-500 mb-4">$39.99</h3>
-              <i
-                class="ri-shopping-bag-line text-xl text-zinc-500 bg-zinc-100 text-center justify-center rounded-full w-10 h-10 hover:bg-yellow-200"
-              ></i>
+              <div
+                class="w-10 h-10 text-white text-center bg-primary rounded-full p-2 hover:bg-green-300 hover:text-gray-500 transition"
+              >
+                <i class="ri-shopping-bag-line"></i>
+              </div>
             </div>
           </div>
 
@@ -274,9 +332,11 @@
             </p>
             <div class="flex justify-between p-2">
               <h3 class="text-2xl font-bold text-zinc-500 mb-4">$39.99</h3>
-              <i
-                class="ri-shopping-bag-line text-xl text-zinc-500 bg-zinc-100 text-center justify-center rounded-full w-10 h-10 hover:bg-yellow-200"
-              ></i>
+              <div
+                class="w-10 h-10 text-white text-center bg-primary rounded-full p-2 hover:bg-green-300 hover:text-gray-500 transition"
+              >
+                <i class="ri-shopping-bag-line"></i>
+              </div>
             </div>
           </div>
         </div>
@@ -328,17 +388,17 @@
           <div class="flex justify-center pb-10 space-x-3">
             <div>
               <a href="#">
-                <i class="ri-facebook-fill bg-blue-400 p-2 rounded-full"></i>
+                <i class="ri-facebook-fill bg-gray-400 p-2 rounded-full"></i>
               </a>
             </div>
             <div>
               <a href="#">
-                <i class="ri-twitter-x-line bg-blue-400 p-2 rounded-full"></i>
+                <i class="ri-twitter-x-line bg-gray-400 p-2 rounded-full"></i>
               </a>
             </div>
             <div>
               <a href="#">
-                <i class="ri-github-line bg-blue-400 p-2 rounded-full"></i>
+                <i class="ri-github-line bg-gray-400 p-2 rounded-full"></i>
               </a>
             </div>
           </div>

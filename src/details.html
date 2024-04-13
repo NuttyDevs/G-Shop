@@ -25,49 +25,74 @@
     <link href="./output.css" rel="stylesheet" />
     <title>Document</title>
   </head>
+
+
   <body class="bg-gray-100">
     <section id="hero" class="text-white bg-slate-700">
       <!-- Hero Container -->
-      <div class="container mx-auto mt-32 py-12 my-32 px-6">
+      <div class="container max-w-6xl mx-auto">
         <!-- Menu/Logo Container -->
         <nav
-          class="flex items-center justify-between mx-auto font-normal text-white bg-slate-700 p-12"
+          class="flex items-center justify-between font-normal text-white bg-slate-700"
         >
           <!-- Logo -->
           <a href="index.html">
-            <div class="nav__logo flex gap-2 items-center text text-3xl">
-              <i class="ri-shopping-cart-2-line text-red-600"></i>
-              <p>GShopping</p>
+            <div class="nav__logo py-12">
+              <p
+                class="text-2xl text-white border-b-4 rounded-l-3xl border-gray-300"
+              >
+                <span class="text-red-500 text-3xl">G</span>
+                Shopping
+              </p>
             </div>
           </a>
 
           <!-- Menu -->
-          <div class="hidden h-10 font-alata md:flex md:space-x-8">
-            <div class="flex">
+          <div class="hidden h-10 font-normal md:flex md:space-x-4">
+            <!-- searchbar -->
+            <div class="w-full xl:max-w-xl lg:max-w-lg lg:flex relative hidden">
+              <span class="absolute left-4 top-3 text-lg text-gray-400">
+                <i class="ri-search-line"></i>
+              </span>
               <input
                 type="text"
-                placeholder="Enter your email address"
-                class="px-4 text-center border border-zinc-500 placeholder:text-xs placeholder:text-center md:text-left placeholder:md:text-left text-gray-800 focus:outline-none rounded-l-lg"
+                class="w-full border border-primary border-r-0 pl-12 py-3 pr-3 rounded-l-md focus:outline-none"
+                placeholder="search"
               />
               <button
-                class="inline-block px-2 text-center border rounded-r-lg hover:bg-violet-800 hover:border-violet-800"
+                type="submit"
+                class="bg-primary border border-primary text-white px-8 font-medium rounded-r-md hover:bg-transparent hover:text-primary transition"
               >
                 Search
               </button>
             </div>
+            <!-- searchbar end -->
 
-            <div class="group">
-              <i class="ri-shopping-cart-2-line text text-xl">Cart</i>
-
+            <div class="nav-group">
               <div
-                class="mx-2 group-hover:border-b group-hover:border-blue-50"
-              ></div>
-            </div>
-            <div class="group">
-              <i class="ri-user-line text-xl">Sing in</i>
-              <div
-                class="mx-2 group-hover:border-b group-hover:border-blue-50"
-              ></div>
+                class="flex items-center justify-between space-x-6 capitalize pl-6"
+              >
+                <a
+                  href="index.html"
+                  class="text-white text-xl text-center hover:border-b"
+                  >home</a
+                >
+                <a
+                  href="products.html"
+                  class="text-white text-xl text-center hover:border-b"
+                  >shop</a
+                >
+                <a
+                  href="#"
+                  class="text-white text-xl text-center hover:border-b"
+                  >contact
+                </a>
+                <a
+                  href="sign_in.html"
+                  class="text-white text-xl text-center hover:border-b"
+                  >signin</a
+                >
+              </div>
             </div>
           </div>
 
@@ -89,32 +114,51 @@
             id="menu"
             class="md:hidden absolute top-0 bottom-0 left-0 hidden justify-center self-end w-full min-h-screen py-1 pt-40 pl-12 space-y-3 text-lg text-white uppercase bg-black opacity-80"
           >
-            <div class="flex flex-col gap-4 text-center py-20">
-              <div class="flex">
+            <div class="flex flex-col gap-4 text-center space-y-6">
+              <!-- searchbar -->
+              <div class="w-full flex relative">
+                <span class="absolute left-4 top-3 text-sm text-gray-400">
+                  <i class="ri-search-line"></i>
+                </span>
                 <input
                   type="text"
-                  placeholder="Enter your email address"
-                  class="px-4 text-center border border-zinc-500 placeholder:text-xs placeholder:text-center md:text-left placeholder:md:text-left text-gray-800 focus:outline-none rounded-l-lg"
+                  class="w-full border border-primary border-r-0 pl-12 py-2 pr-2 rounded-l-md focus:outline-none"
+                  placeholder="search"
                 />
                 <button
-                  class="inline-block px-2 text-center border rounded-r-lg hover:bg-violet-800 hover:border-violet-800"
+                  type="submit"
+                  class="bg-primary border border-primary text-white px-8 font-medium rounded-r-md hover:bg-transparent hover:text-primary transition"
                 >
                   Search
                 </button>
               </div>
+              <!-- searchbar end -->
 
-              <div class="group">
-                <i class="ri-shopping-cart-2-line text-xl">Cart</i>
-
+              <div class="nav-group">
                 <div
-                  class="mx-2 group-hover:border-b group-hover:border-blue-50"
-                ></div>
-              </div>
-              <div class="group">
-                <i class="ri-user-line text-center">Sing in</i>
-                <div
-                  class="mx-2 group-hover:border-b group-hover:border-blue-50"
-                ></div>
+                  class="flex flex-col items-center justify-between space-y-6 capitalize pl-6"
+                >
+                  <a
+                    href="index.html"
+                    class="text-white text-xl text-center hover:border-b"
+                    >home</a
+                  >
+                  <a
+                    href="products.html"
+                    class="text-white text-xl text-center hover:border-b"
+                    >shop</a
+                  >
+                  <a
+                    href="#"
+                    class="text-white text-xl text-center hover:border-b"
+                    >contact
+                  </a>
+                  <a
+                    href="sign_in.html"
+                    class="text-white text-xl text-center hover:border-b"
+                    >signin</a
+                  >
+                </div>
               </div>
             </div>
           </div>
@@ -122,114 +166,172 @@
       </div>
     </section>
 
+    <!--breadcrums  -->
+    <div class="container py-4 flex items-center gap-2 mt-4">
+      <a href="index.html" class="text-primary text-xl">
+        <i class="ri-home-7-fill"></i>
+      </a>
+      <span class="text-xl text-gray-400">
+        <i class="ri-arrow-right-s-line"></i>
+      </span>
+      <p class="text-gray-600 font-medium">Product Details</p>
+    </div>
+    <!--breadcrums end  -->
+
+
     <section id="details">
-      <!-- Global Container -->
-      <div
-        class="flex items-center justify-center min-h-screen bg-slate-100 mb-20"
-      >
-        <!-- Card Container -->
-        <div
-          class="flex flex-col mb-4 space-y-3 bg-white rounded-2xl shadow-2xl md:flex-row md:space-y-0 md:space-x-10 md:m-0 md:p-16 border-2 p-2 border-gray-300"
-        >
-          <!-- Image Div -->
-          <div class="imges p-4 my-4 border-gray-300 border-2">
-            <div class="imge-lg border-gray-300 border-2">
-              <img
-                id="img-large"
-                src="../img/imac1-2.jpg"
-                alt=""
-                class="mx-auto duration-200 py-8 hover:scale-105"
-              />
-            </div>
-            <div class="imge-sm px-20 border-gray-300 border-2">
-              <div
-                class="imge-sm-1 w-20 border-2 p-2 border-gray-300 rounded-lg shadow-md"
-              >
-                <img
-                  id="img-small1"
-                  class="img-small"
-                  src="../img/imac1-2.jpg"
-                  alt=""
-                />
-              </div>
-              <div
-                class="imge-sm-1 w-20 border-2 p-2 border-gray-300 rounded-lg shadow-md"
-              >
-                <img
-                  id="img-small2"
-                  class="img-small"
-                  src="../img/imac1-1.jpg"
-                  alt=""
-                />
-              </div>
-              <div
-                class="imge-sm-1 w-20 border-2 p-2 border-gray-300 rounded-lg shadow-md"
-              >
-                <img
-                  id="img-small3"
-                  class="img-small"
-                  src="../img/imac1-3.jpg"
-                  alt=""
-                />
-              </div>
-              <div
-                class="imge-sm-1 w-20 border-2 p-2 border-gray-300 rounded-lg shadow-md"
-              >
-                <img
-                  id="img-small4"
-                  class="img-small"
-                  src="../img/pen1-1.jpg"
-                  alt=""
-                />
-              </div>
-            </div>
-          </div>
-          <!-- Content -->
-          <div class="flex flex-col space-y-6 p-4">
-            <!-- Label & Title Container -->
-            <div class="flex flex-col mb-4 space-y-3 text-center md:text-left">
-              <div>
-                <div
-                  class="inline-block px-3 py-1 text-sm text-white bg-orange-500 rounded-full"
-                >
-                  Free Shipping
-                </div>
-              </div>
+       <!-- Detail  -->
+      <div class=" container grid lg:grid-cols-2 mt-4 mx-auto gap-6  mb-6     ">
 
-              <!-- Title -->
-              <div class="max-w-sm text-2xl font-medium">
-                iMac 24-inch (M3): everything you need to know
-              </div>
-              <!-- Price Container -->
-              <div
-                class="flex flex-col mb-4 space-y-3 text-center md:text-left"
-              >
-                <p class="line-through">฿56,900.00</p>
-                <p class="text-5xl font-bold">฿49,900.00</p>
-                <p class="text-sm font-light text-gray-400">
-                  Apple iMac 21.5" i5 Quad Core 2.5GHz 8GB 500GB HD 6750
-                  Graphics A1311
-                </p>
-              </div>
-
-              <!-- Button Group -->
-              <div class="group">
-                <button
-                  class="w-full transition-all duration-150 bg-red-600 text-white border-b-8 border-b-red-600 rounded-lg group-hover:border-t-8 group-hover:border-b-0 group-hover:bg-red-600 group-hover:border-t-red-600 group-hover:shadow-lg"
-                >
-                  <div
-                    class="px-8 py-4 duration-150 bg-red-500 rounded-lg group-hover:bg-red-700"
-                  >
-                    Add to cart
-                  </div>
-                </button>
-              </div>
-            </div>
+        <!-- Product image -->
+        <div class="w-full">
+          <img src="../img/macbook1-1.jpg" alt="" class="w-full shadow-md" />
+          <!-- product image-sm -->
+          <div class="grid grid-cols-4 mt-4 gap-2 mb-12 items-center shadow-md">
+            <img src="../img/macbook1-2.jpg" alt="" class="w-full" />
+            <img src="../img/case2-2.jpg" alt="" class="w-full" />
+            <img src="../img/case2-1.jpg" alt="" class="w-full" />
+            <img src="../img/imac1-2.jpg" alt="" class="w-full" />
+            <!-- product image-sm -->
           </div>
+          <!-- product image-sm end-->
+        </div>
+        <!-- Product image end -->
+
+        <!-- Product content  -->
+        <div class=" max-w-md space-y-4 sm-text-xl ">
+          <h1 class="text-3xl text-gray-700 font-bold">
+            A MacBook Air for everyone.
+          </h1>
+          <div class="flex gap-2">
+            <div class="text-yellow-400">
+              <i class="ri-star-s-fill"></i>
+              <i class="ri-star-s-fill"></i>
+              <i class="ri-star-s-fill"></i>
+              <i class="ri-star-s-fill"></i>
+              <i class="ri-star-s-fill"></i>
+            </div>
+            <p class="text-sm text-gray-500">(150 Reviews)</p>
+          </div>
+          <div class="flex gap-2">
+            <p class="text-xl text-gray-800 capitalize">inventory stocks :</p>
+            <p class="text-xl text-primary capitalize font-semibold">
+              in stock
+            </p>
+          </div>
+          <div class="flex gap-2">
+            <p class="text-xl text-gray-800 capitalize">brand :</p>
+            <p class="text-xl text-gray-500 capitalize">apple</p>
+          </div>
+          <div class="flex gap-2">
+            <p class="text-xl text-gray-800 capitalize">chip :</p>
+            <p class="text-xl text-gray-500 capitalize">Apple M2 chip</p>
+          </div>
+          <div class="flex gap-2">
+            <p class="text-xl text-gray-800 capitalize">Memory :</p>
+            <p class="text-xl text-gray-500 capitalize">8GB 16GB</p>
+          </div>
+          <div class="flex gap-2">
+            <p class="text-xl text-gray-800 capitalize">price :</p>
+            <p class="text-xl text-gray-500 capitalize">
+              $ 999 (8-core GPU,256GB SSD)
+            </p>
+          </div>
+          <p class="text-xl text-gray-800 capitalize">
+            Liquid Retina display 13.6-inch (diagonal) LED-backlit display with
+            IPS technology;1 2560-by-1664 native resolution at 224 pixels per
+            inch 500 nits brightness
+          </p>
+
+          <div class="flex gap-2">
+            <p class="text-xl text-gray-800 capitalize">color :</p>
+            <p class="text-xl text-gray-500 capitalize">
+              Silver,Starlight,Space Gray
+            </p>
+          </div>
+
+          <!-- product-button -->
+          <div class="flex w-full gap-4">
+            <a href="cart.html"
+              class="flex items-center text-white bg-primary px-8 py-4 rounded text-xl border border-primary hover:bg-transparent hover:text-primary transition"
+            >
+              <i class="ri-shopping-bag-line"></i>
+              <p class="uppercase">add to cart</p>
+            </a>
+            <a href="wishlist.html"
+              class="flex items-center text-primary px-8 py- rounded text-xl border border-primary bg-transparent transition hover:bg-green-50"
+            >
+              <i class="ri-heart-3-line"></i>
+              <p class="uppercas4e">wishlist</p>
+            </a>
+          </div>
+          <!-- product-button end-->
+        </div>
+        <!-- Product content end -->
+
+      </div> 
+      <!-- close container -->
+
+      <!-- Product details -->
+      <div class="container mx-auto">
+        <h2 class="text-2xl text-gray-800">Product details</h2>
+        <div class="border-b border-gray-200 mt-4">
+          
+        </div>
+        <div class="space-y-4 text-gray-700 text-base mt-6" >
+          <p>
+            <h4>Battery and Power2</h4>
+            Up to 18 hours Apple TV app movie playback
+            Up to 15 hours wireless web
+            52.6-watt hour lithium polymer battery
+            30W USB-C Power Adapter (included with M2 and M3 with 8 core GPU)
+            35W Dual USB-C Port Compact Power Adapter (included with M2 and M3 with 10-core GPU and 512GB storage, configurable with M2 and M3 with 8 core GPU)
+            USB-C to MagSafe 3 Cable
+            Fast-charge capable with 70W USB-C Power Adapter
+          </p>
+          <p>
+            <h4>Backlit Magic Keyboard with:</h4>
+            
+
+            78 (U.S.) or 79 (ISO) keys including 12 full-height function keys and 4 arrow keys in an inverted-T arrangement
+            Touch ID
+            Ambient light sensor
+            Force Touch trackpad for precise cursor control and pressure-sensing capabilities; enables Force clicks, accelerators, pressure-sensitive drawing, and Multi-Touch gestures
+          </p>
         </div>
       </div>
-    </section>
-    <!-- Footer -->
+      <!-- Product details end -->
+
+      <!-- Table details -->
+      <div class="container mx-auto pb-16">
+
+        <table class="table-auto border-collapse w-full text-left text-gray-700">
+
+          <tr>
+            <th class="py-2 px-4 border border-gray-300 w-40 font-medium">Audio Playback</th>
+            <td class="py-2 px-4 border border-gray-300 w-40 font-sm">Supported formats include AAC, MP3, Apple Lossless, FLAC, Dolby Digital, Dolby Digital Plus, and Dolby Atmos</td>
+          </tr>
+          <tr>
+            <th class="py-2 px-4 border border-gray-300 w-40 font-medium">Size and Weight</th>
+            <td class="py-2 px-4 border border-gray-300 w-40 font-sm">Height:1.13 cmWidth:30.41 cm </td>
+          </tr>
+          <tr>
+            <th class="py-2 px-4 border border-gray-300 w-40 font-medium">Video Playback</th>
+            <td class="py-2 px-4 border border-gray-300 w-40 font-sm">Supported formats include HEVC,
+              H.264, AV1, and ProRes
+              HDR with Dolby Vision, HDR10, and HLG </td>
+          </tr>
+
+        </table>
+
+        
+
+      </div>
+      <!-- Table details end -->
+   </section>
+    
+
+  <!-- footer -->
     <footer class="text-white bg-slate-700">
       <div class="container mx-auto pt-12 px-5 pb-10">
         <!-- Flex Container For All Items -->
@@ -274,17 +376,17 @@
           <div class="flex justify-center pb-10 space-x-3">
             <div>
               <a href="#">
-                <i class="ri-facebook-fill bg-blue-400 p-2 rounded-full"></i>
+                <i class="ri-facebook-fill bg-gray-400 p-2 rounded-full"></i>
               </a>
             </div>
             <div>
               <a href="#">
-                <i class="ri-twitter-x-line bg-blue-400 p-2 rounded-full"></i>
+                <i class="ri-twitter-x-line bg-gray-400 p-2 rounded-full"></i>
               </a>
             </div>
             <div>
               <a href="#">
-                <i class="ri-github-line bg-blue-400 p-2 rounded-full"></i>
+                <i class="ri-github-line bg-gray-400 p-2 rounded-full"></i>
               </a>
             </div>
           </div>
